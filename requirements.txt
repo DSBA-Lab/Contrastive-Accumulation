@@ -1,0 +1,13 @@
+accelerate==0.20.3
+beir==2.0.0
+elasticsearch==7.9.1
+faiss-cpu==1.7.4
+jsonlines==4.0.0
+omegaconf==2.3.0
+regex==2022.6.2
+sentence-transformers==2.2.2
+sentencepiece==0.1.99
+torch==1.13.0a0+08820cb
+tqdm @ file:///home/conda/feedstock_root/build_artifacts/tqdm_1649051611147/work
+transformers==4.18.0
+wget==3.2

@@ -1,0 +1,32 @@
+## data
+train_file: /workspace/mnt2/dpr_datasets/msmarco/preprocessed/msmarco_train_filtered.json
+dev_file: /workspace/mnt2/dpr_datasets/msmarco/preprocessed/msmarco_dev.json
+
+## training
+base_model: bert-base-uncased
+per_device_train_batch_size: 32
+per_device_eval_batch_size: 8
+adam_eps: 1.0e-8
+weight_decay: 0.0
+max_grad_norm: 2.0
+lr: 2.0e-5
+warmup_steps: 1237
+max_train_epochs: 10
+seed: 19980406
+gradient_accumulation_steps: 1
+num_hard_negative_ctx: 30
+num_other_negative_ctx: 30
+vram_fraction: 0.3 # 24GB / 80GB
+
+## logs
+log_dir : /workspace/mnt2/dpr_logs
+embed_dir : /workspace/mnt2/dpr_output/
+run_name : msmarco_dpr_bsz32_filtered
+
+## loss (Contrastive Accumulation)
+prev_cache : False
+cont_cache : False
+cache_query : False
+cache_hard_neg : False
+cache_size : 16
+use_hard_neg : True

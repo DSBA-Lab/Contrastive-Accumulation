@@ -1,0 +1,31 @@
+## data
+train_file: /workspace/mnt2/dpr_datasets/downloads/data/retriever/trivia-train.json
+dev_file: /workspace/mnt2/dpr_datasets/downloads/data/retriever/trivia-dev.json
+
+## training
+base_model: bert-base-uncased
+per_device_train_batch_size: 8
+per_device_eval_batch_size: 8
+adam_eps: 1.0e-8
+weight_decay: 0.0
+max_grad_norm: 2.0
+lr: 2.0e-5
+warmup_steps: 1237
+max_train_epochs: 40
+seed: 19980406
+gradient_accumulation_steps: 1
+num_hard_negative_ctx: 30
+num_other_negative_ctx: 30
+vram_fraction: 0.1375 # 11GB / 80GB
+
+## logs
+log_dir : /workspace/mnt2/dpr_logs
+embed_dir : /workspace/mnt2/dpr_output/
+run_name : trivia_dpr_bsz8
+
+## loss (Contrastive Accumulation)
+prev_cache : False
+cont_cache : False
+cache_hard_neg : False
+cache_size : 8
+cache_query : False 
