@@ -1,6 +1,6 @@
 # A Gradient Accumulation Method for Dense Retriever under Memory Constraint
 
-This repository is the official implementation of [A Gradient Accumulation Method for Dense Retriever under Memory Constraint](https://arxiv.org/abs/2406.12356).
+This repository is the official implementation of [A Gradient Accumulation Method for Dense Retriever under Memory Constraint](https://arxiv.org/abs/2406.12356). It is adapted from the repository [nanoDPR](https://github.com/Hannibal046/nanoDPR/tree/master), which offers a simplified replication of the DPR model. 
 
 ## 1. Requirements
 ---
